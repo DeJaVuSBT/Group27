@@ -29,7 +29,44 @@ public class Waves : MonoBehaviour
         
     }
 
+    public float GetHeight(Vector3 position)
+    {
+        //scale factor and pos in local space
+        var scale = new Vector3(1 / transform.lossyScale.x, 0, 1 / transform.lossyScale.z);
+        var localPos = Vector3.Scale((position - transform.position), scale);
 
+        //get edge points
+        var p1 = new Vector3(Mathf.Floor(localPos.x), 0, Mathf.Floor(localPos.z));
+        var p2 = new Vector3(Mathf.Ceil(localPos.x), 0, Mathf.Ceil(localPos.z));
+        var p3 = new Vector3(Mathf.Floor(localPos.x), 0, Mathf.Floor(localPos.z));
+        var p4 = new Vector3(Mathf.Ceil(localPos.x), 0, Mathf.Ceil(localPos.z));
+
+        //adjust points
+        p1.x = Mathf.Clamp(p1.x, 0, Dimension);
+        p1.z = Mathf.Clamp(p1.z, 0, Dimension);
+        p2.x = Mathf.Clamp(p2.x, 0, Dimension);
+        p2.z = Mathf.Clamp(p2.z, 0, Dimension);
+        p3.x = Mathf.Clamp(p3.x, 0, Dimension);
+        p3.z = Mathf.Clamp(p3.z, 0, Dimension);
+        p4.x = Mathf.Clamp(p4.x, 0, Dimension);
+        p4.z = Mathf.Clamp(p4.z, 0, Dimension);
+
+        //get the 
+        var max = Mathf.Max(Vector3.Distance(p1, localPos), Vector3.Distance(p2, localPos), Vector3.Distance(p3, localPos), Vector3.Distance(p4, localPos) + Mathf.Epsilon);
+        var dist = (max - Vector3.Distance(p1, localPos))
+                 + (max - Vector3.Distance(p2, localPos))
+                 + (max - Vector3.Distance(p3, localPos))
+                 + (max - Vector3.Distance(p4, localPos) + Mathf.Epsilon);
+
+        //height
+        var height = Mesh.vertices[index((int)p1.x, (int)p1.z)].y * (max - Vector3.Distance(p1, localPos))
+                   + Mesh.vertices[index((int)p2.x, (int)p2.z)].y * (max - Vector3.Distance(p2, localPos))
+                   + Mesh.vertices[index((int)p3.x, (int)p3.z)].y * (max - Vector3.Distance(p3, localPos))
+                   + Mesh.vertices[index((int)p4.x, (int)p4.z)].y * (max - Vector3.Distance(p4, localPos));
+
+        return height * transform.lossyScale.y / dist;
+
+    }
     private Vector3[] GenerateVerts()
     {
         var verts = new Vector3 [ (Dimension + 1) * (Dimension + 1) ];
