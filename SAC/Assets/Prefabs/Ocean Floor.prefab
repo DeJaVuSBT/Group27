@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6615606019273294352}
   - component: {fileID: 6615606019273294349}
   m_Layer: 0
-  m_Name: Waves
+  m_Name: Ocean Floor
   m_TagString: Ocean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6615606019273294353}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.16933596, y: -0, z: -0, w: 0.9855584}
   m_LocalPosition: {x: -10, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -19.498, y: 0, z: 0}
 --- !u!114 &6615606019273294355
 MonoBehaviour:
   m_ObjectHideFlags: 0
