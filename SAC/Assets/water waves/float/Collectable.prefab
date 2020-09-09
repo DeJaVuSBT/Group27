@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 2378153462891690681}
   - component: {fileID: 2378153462891690685}
   - component: {fileID: 2378153462891690680}
+  - component: {fileID: 3077504783810416644}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Collectable
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +217,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2378153462891690567}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -258,3 +259,16 @@ MonoBehaviour:
   - {fileID: 2378153461011060702}
   - {fileID: 2378153462402108413}
   - {fileID: 2378153462676695755}
+--- !u!114 &3077504783810416644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378153462891690567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ad95dd87cb85f418a4aff8251aaa92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}

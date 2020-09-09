@@ -64,6 +64,8 @@ public class playerManager : MonoBehaviour
         {
             isGrounded = true;
         }
+     
+       
     }
 
     float Clamp(float angle, float min, float max)
