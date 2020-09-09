@@ -63,7 +63,7 @@ public class playerManager : MonoBehaviour
         if(collision.gameObject.tag == "Ocean")
         {
             isGrounded = true;
-        }
+        } 
     }
 
     float Clamp(float angle, float min, float max)
