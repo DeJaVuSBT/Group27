@@ -125,8 +125,8 @@ GameObject:
   - component: {fileID: 8553344189555251807}
   - component: {fileID: 8553344189555251806}
   m_Layer: 0
-  m_Name: Character Visual on wave
-  m_TagString: Untagged
+  m_Name: Character
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
