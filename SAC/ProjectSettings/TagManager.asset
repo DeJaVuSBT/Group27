@@ -7,6 +7,10 @@ TagManager:
   - Ocean
   - Trash
   - Obstacle
+  - GM
+  - HealthUI
+  - TrashUI
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

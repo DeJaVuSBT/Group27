@@ -14,11 +14,4 @@ public class rockManager : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if(collider.tag == "Player")
-        {
-            Destroy(collider.gameObject);
-        }
-    }
 }
