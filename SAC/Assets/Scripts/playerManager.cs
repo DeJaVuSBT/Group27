@@ -61,15 +61,21 @@ public class playerManager : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(transform.rotation, defaulYtOrientation, adjustTurnSpeed * Time.fixedDeltaTime);
             }
     }
-    void OnCollisionEnter(Collision collision)
+
+    void OnTriggerEnter(Collider collider)
     {
-        if(collision.gameObject.tag == "Ocean")
+        if (collider.tag == "Obstacle")
         {
-            isGrounded = true;
+            Destroy(this);
         }
-     
-       
+        if (collider.tag == "Trash")
+        {
+            Destroy(collider.gameObject);
+        }
     }
+
+
+
 
     float Clamp(float angle, float min, float max)
     {
