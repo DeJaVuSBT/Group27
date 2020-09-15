@@ -7,8 +7,10 @@ public class WaterFloat : MonoBehaviour
 {
     public float AirDrag = 1;
     public float WaterDrag = 10;
+    public bool NoRotation = true;
+    public bool AbleJump = false;
     public bool AffectDirection = true;
-    public bool AttachToSurface = false;
+    public bool AttachToSurface = true;
     public Transform[] FloatPoints;
 
     protected Rigidbody Rb;
@@ -28,6 +30,7 @@ public class WaterFloat : MonoBehaviour
         Waves = FindObjectOfType<Waves>();
         Rb = GetComponent<Rigidbody>();
         Rb.useGravity = false;
+        
 
         //find center
         WaterLinePoints = new Vector3[FloatPoints.Length];
@@ -40,10 +43,11 @@ public class WaterFloat : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         //default water surface
         var newWaterLine = 0f;
         var pointUnderWater = false;
-
+        
         //set WaterLinePoints and WaterLine
         for (int i = 0; i < FloatPoints.Length; i++)
         {
@@ -64,24 +68,21 @@ public class WaterFloat : MonoBehaviour
         //gravity
         var gravity = Physics.gravity;
         Rb.drag = AirDrag;
+        AbleJump = false;
+       
         if (WaterLine > Center.y)
         {
             Rb.drag = WaterDrag;
-            //under water
-            if (AttachToSurface)
-            {
-                //attach to water surface
-                Rb.position = new Vector3(Rb.position.x, WaterLine - centerOffset.y, Rb.position.z);
-            }
-            else
-            {
-                //go up
-                gravity = AffectDirection ? TargetUp * -Physics.gravity.y : -Physics.gravity;
-                transform.Translate(Vector3.up * waterLineDelta * 0.9f);
-            }
+
+            AbleJump = true;
+            
+            //go up
+            gravity = AffectDirection ? TargetUp * -Physics.gravity.y : -Physics.gravity;
+            transform.Translate(Vector3.up * waterLineDelta * 0.9f*Time.deltaTime);
+            
         }
         Rb.AddForce(gravity * Mathf.Clamp(Mathf.Abs(WaterLine - Center.y), 0, 1));
-
+        
         //rotation
         if (pointUnderWater)
         {
@@ -91,6 +92,14 @@ public class WaterFloat : MonoBehaviour
         }
     }
 
+    
+    private void LateUpdate()
+    {
+        if (NoRotation)
+        {
+             transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

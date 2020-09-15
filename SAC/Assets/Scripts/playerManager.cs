@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerManager : MonoBehaviour
 {
+    public WaterFloat wf;
     public float verticalSpeed = 1f;
     public float horizontalSpeed = 2f;
     public float jumpForce = 10f;
@@ -17,6 +18,7 @@ public class playerManager : MonoBehaviour
     public float maxTurn = 9f;
     void Start()
     {
+       
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
@@ -33,10 +35,11 @@ public class playerManager : MonoBehaviour
         Vector3 jumpVector = new Vector3(0, jumpForce, 0);
         transform.Translate(moveVector * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if(Input.GetKeyDown(KeyCode.Space) && wf.AbleJump == true)
         {
+            Debug.Log("jumping");
             rb.AddForce(jumpVector, ForceMode.Impulse);
-            isGrounded = false;
+          //  isGrounded = false;
         }
     }
 
@@ -66,6 +69,9 @@ public class playerManager : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+
+
 
     float Clamp(float angle, float min, float max)
     {
