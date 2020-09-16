@@ -6,8 +6,8 @@ public class gameMaster : MonoBehaviour
 {
     private static gameMaster instance;
     public Vector3 lastCheckPointPos;
+    public Vector3 lastCameraPos;
     public int lastHealth;
-    public int lastTrash;
 
     private void Awake()
     {
