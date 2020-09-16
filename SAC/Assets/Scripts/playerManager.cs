@@ -62,15 +62,11 @@ public class playerManager : MonoBehaviour
             }
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collider.tag == "Obstacle")
+        if(collision.tag == "Trash")
         {
-            Destroy(this);
-        }
-        if (collider.tag == "Trash")
-        {
-            Destroy(collider.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
