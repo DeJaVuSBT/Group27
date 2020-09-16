@@ -41,10 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7049803608021577279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94ad37cfeaf36543ba955e79e57019e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca03bc9f3ff5e75489f5473445082ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dimension: 80
+  Dimension: 10
   Octaves:
   - speed: {x: 0.5, y: 0.5}
     scale: {x: 10, y: 10}
