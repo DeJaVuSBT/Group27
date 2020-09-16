@@ -11,6 +11,7 @@ TagManager:
   - HealthUI
   - TrashUI
   - CheckPoint
+  - EndTrigger
   layers:
   - Default
   - TransparentFX

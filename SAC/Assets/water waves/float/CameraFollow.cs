@@ -21,6 +21,5 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 Pos = Character.position + Offset;
         transform.position = Vector3.Slerp(transform.position, Pos,Smooth);
-        Debug.Log(transform.position);
     }
 }
