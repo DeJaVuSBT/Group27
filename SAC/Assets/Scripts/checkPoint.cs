@@ -19,7 +19,7 @@ public class checkPoint : MonoBehaviour
         {
             camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
             gm.lastCheckPointPos = transform.position;
-            gm.lastCameraPos = camera.transform.position;
+            gm.lastCameraPos = transform.position + camera.Offset;
             
         }
     }
