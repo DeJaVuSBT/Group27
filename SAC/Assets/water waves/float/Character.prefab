@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8320234763994426593, guid: 15d976a163f07ab4096e594ce489d4bf, type: 3}
+      propertyPath: m_Antialiasing
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8320234763994426594, guid: 15d976a163f07ab4096e594ce489d4bf, type: 3}
       propertyPath: m_Name
       value: Camera

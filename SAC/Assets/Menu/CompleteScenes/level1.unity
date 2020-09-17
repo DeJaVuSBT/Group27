@@ -8661,7 +8661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577276, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577276, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: m_LocalScale.x
@@ -8681,7 +8681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577277, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: Dimension
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577277, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: Octaves.Array.data[1].speed.x
