@@ -12,6 +12,7 @@ TagManager:
   - TrashUI
   - CheckPoint
   - EndTrigger
+  - instadeath
   layers:
   - Default
   - TransparentFX

@@ -88,6 +88,10 @@ public class healthUIScript : MonoBehaviour
         {
             gm.lastHealth = health;
         }
+        if (collider.tag == "instadeath")
+        {
+               health = 0;
+        }
     }
 
     private void OnTriggerExit(Collider collider)
