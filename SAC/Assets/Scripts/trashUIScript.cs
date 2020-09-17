@@ -7,11 +7,11 @@ public class trashUIScript : MonoBehaviour
     public GameObject[] gos;
     private float barLength;
     private float initialTrash;
-    private gameMaster gm;
 
     private void Awake()
     {
         gos = GameObject.FindGameObjectsWithTag("Trash");
+        Debug.Log(gos.Length);
         initialTrash = gos.Length;
     }
 
@@ -19,6 +19,7 @@ public class trashUIScript : MonoBehaviour
     {
         
         gos = GameObject.FindGameObjectsWithTag("Trash");
+        Debug.Log(gos.Length);
         if (initialTrash == gos.Length)
         {
             barLength = 0;

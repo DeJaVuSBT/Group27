@@ -3349,22 +3349,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8553344189555251806, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553344189555251807, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-      propertyPath: verticalSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553344189555251807, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-      propertyPath: horizontalSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553344189918616272, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
+    - target: {fileID: 1454662717, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 903763303}
+    - target: {fileID: 1454662717, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1224651892}
+    - target: {fileID: 1454662717, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1309986807}
     - target: {fileID: 8553344189918616274, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3408,10 +3404,6 @@ PrefabInstance:
     - target: {fileID: 8553344189918616274, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8553344189918616275, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-      propertyPath: AbleJump
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8553344189918616277, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
       propertyPath: m_Name
@@ -9273,43 +9265,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: c7f164e1d30473b4aa5f749694306f46, type: 3}
---- !u!1 &1454662711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8553344189918616277, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
-  m_PrefabInstance: {fileID: 480165534}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1454662712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454662711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e348c5500b0c7241b2dfa8454c8ee94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1454662717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454662711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd39d19b101ec7468726d9d23d1d331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  numOfHearts: 3
-  hearts:
-  - {fileID: 903763303}
-  - {fileID: 1224651892}
-  - {fileID: 1309986807}
-  fullHeart: {fileID: 21300000, guid: 777438a141eeba947b5701accb091d6b, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 4b01e8f42df241d4bac1e8f790c7a1dc, type: 3}
 --- !u!1 &1455091722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 84534992262ab0c47980af3a72aa8ad9, type: 3}
