@@ -8,7 +8,13 @@ public class endTrigger : MonoBehaviour
     public int percentageTrashCollected;
     private trashUIScript trash;
     private playerManager pl;
-    public GameObject LoseScreenCanvas;
+    public GameObject LoseScreenCanvas1;
+    public GameObject LoseScreenCanvas2;
+    public GameObject LoseScreenCanvas3;
+    public GameObject GameWonScreen1;
+    public GameObject GameWonScreen2;
+    public GameObject GameWonScreen3;
+
     private bool hasEntered = false;
     private void Start()
     {
@@ -30,48 +36,39 @@ public class endTrigger : MonoBehaviour
     {
         if (pl.score > percentageTrashCollected * trash.gos.Length / 100)
         {
-            level++;
-            LoadFirstLevel();
-            LoadSecondLevel();
-            LoadThirdLevel();
-            LoadVictoryLevel();
+            if(level == 1)
+            {
+                Instantiate(GameWonScreen1);
+            }
+
+            if (level == 2)
+            {
+                Instantiate(GameWonScreen2);
+            }
+
+            if (level == 3)
+            {
+                Instantiate(GameWonScreen3);
+            }
         }
         else
         {
-            Instantiate(LoseScreenCanvas);
+            if (level == 1)
+            {
+                Instantiate(LoseScreenCanvas1);
+            }
+
+            if (level == 2)
+            {
+                Instantiate(LoseScreenCanvas2);
+            }
+
+            if (level == 3)
+            {
+                Instantiate(LoseScreenCanvas3);
+            }
             pl.verticalSpeed = 0f;
         }
     }
 
-    public void LoadFirstLevel()
-    {
-        if (level == 1)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("level1");
-        }
-    }
-
-    public void LoadSecondLevel()
-    {
-        if (level == 2)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("level2");
-        }
-    }
-
-    public void LoadThirdLevel()
-    {
-        if (level == 3)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("level3");
-        }
-    }
-
-    public void LoadVictoryLevel()
-    {
-        if (level == 4)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("gameWon");
-        }
-    }
 }
