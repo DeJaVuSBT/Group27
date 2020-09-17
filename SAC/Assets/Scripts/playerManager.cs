@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerManager : MonoBehaviour
 {
     private gameMaster gm;
+    private SoundScript sound;
     public WaterFloat wf;
     public float verticalSpeed = 1f;
     public float horizontalSpeed = 2f;
@@ -21,6 +22,7 @@ public class playerManager : MonoBehaviour
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<gameMaster>();
+        sound = GameObject.FindObjectOfType<SoundScript>();
         score = gm.lastScore;
         rb = gameObject.GetComponent<Rigidbody>();
     }
@@ -40,7 +42,7 @@ public class playerManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space) && wf.AbleJump == true|| Input.GetKeyDown(KeyCode.Space) && ablejump)
         {
-            Debug.Log("jumping");
+            sound.Play("jumpup");
             rb.AddForce(jumpVector, ForceMode.Impulse);
             ablejump = false;
         }
@@ -69,6 +71,7 @@ public class playerManager : MonoBehaviour
     {
         if(collision.tag == "Trash")
         {
+            sound.Play("collect");
             Destroy(collision.gameObject);
             score++;
         }
