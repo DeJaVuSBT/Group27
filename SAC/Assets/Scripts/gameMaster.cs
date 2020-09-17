@@ -12,15 +12,6 @@ public class gameMaster : MonoBehaviour
 
     private void Awake()
     {
-        initialPos = transform.position;
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(instance);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+
     }
 }

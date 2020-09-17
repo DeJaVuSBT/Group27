@@ -3184,7 +3184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8553344189918616275, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
       propertyPath: NoRotation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8553344189918616277, guid: 3e6e96afe36f4e1478980e9fed9c8e45, type: 3}
       propertyPath: m_Name
