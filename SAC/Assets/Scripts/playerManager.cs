@@ -14,7 +14,7 @@ public class playerManager : MonoBehaviour
     private float Yclamp = 0f;
     public int score = 0;
     private Rigidbody rb;
-   
+    
     private Quaternion defaulYtOrientation, targetOrientation;
     public float maxTurn = 9f;
     void Start()
