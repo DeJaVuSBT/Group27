@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerManager : MonoBehaviour
 {
+    private gameMaster gm;
     public WaterFloat wf;
     public float verticalSpeed = 1f;
     public float horizontalSpeed = 2f;
@@ -11,14 +12,15 @@ public class playerManager : MonoBehaviour
     public float turnSpeed = 38f;
     public float adjustTurnSpeed = 2.2f;
     private float Yclamp = 0f;
-    public static int score = 0;
+    public int score = 0;
     private Rigidbody rb;
     
     private Quaternion defaulYtOrientation, targetOrientation;
     public float maxTurn = 9f;
     void Start()
     {
-       
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<gameMaster>();
+        score = gm.lastScore;
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
@@ -62,15 +64,12 @@ public class playerManager : MonoBehaviour
             }
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collider.tag == "Obstacle")
+        if(collision.tag == "Trash")
         {
-            Destroy(this);
-        }
-        if (collider.tag == "Trash")
-        {
-            Destroy(collider.gameObject);
+            Destroy(collision.gameObject);
+            score++;
         }
     }
 

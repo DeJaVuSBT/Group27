@@ -14,13 +14,4 @@ public class trashManager : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerManager.score++;
-            Destroy(gameObject);
-        }
-    }
 }
