@@ -15,7 +15,7 @@ public class endTrigger : MonoBehaviour
         hasEntered = false;
     }
 
-    void Update()
+    void awake()
     {
         trash = GameObject.FindGameObjectWithTag("TrashUI").GetComponent<trashUIScript>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<playerManager>();

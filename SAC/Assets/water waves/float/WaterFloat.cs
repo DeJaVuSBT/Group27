@@ -78,7 +78,7 @@ public class WaterFloat : MonoBehaviour
             
             //go up
             gravity = AffectDirection ? TargetUp * -Physics.gravity.y : -Physics.gravity;
-            transform.Translate(Vector3.up * waterLineDelta * 0.9f*Time.deltaTime);
+            transform.Translate(Vector3.up * waterLineDelta * Time.deltaTime*1.2f);
             
         }
         Rb.AddForce(gravity * Mathf.Clamp(Mathf.Abs(WaterLine - Center.y), 0, 1));

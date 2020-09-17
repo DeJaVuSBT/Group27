@@ -16,6 +16,7 @@ public class SceneManager :MonoBehaviour
     {
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("level2");
+      
     }
     public void Loadlevel3()
     {
