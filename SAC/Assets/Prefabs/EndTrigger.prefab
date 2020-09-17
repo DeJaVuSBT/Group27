@@ -110,4 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   percentageTrashCollected: 50
-  LoseScreenCanvas: {fileID: 7911200878927019430, guid: b3c00553e22b72a4c8edadb49290097c, type: 3}
+  LoseScreenCanvas1: {fileID: 7911200878927019430, guid: b3c00553e22b72a4c8edadb49290097c, type: 3}
+  LoseScreenCanvas2: {fileID: 1951455957005999968, guid: 32f7a563b565ca047800326f2608be6d, type: 3}
+  LoseScreenCanvas3: {fileID: 1509796994639729933, guid: 4d864b39ff554b94181823680a7779f0, type: 3}
+  GameWonScreen1: {fileID: 8001560434630790922, guid: e9212dcb853396c46a2c24bad287e193, type: 3}
+  GameWonScreen2: {fileID: 6068476157531733445, guid: 9d2d8da48d3be464ca8deaab4f7bdf88, type: 3}
+  GameWonScreen3: {fileID: 2947629890506808071, guid: fcc6cd4fbbc765a418c24697ed34a48c, type: 3}
