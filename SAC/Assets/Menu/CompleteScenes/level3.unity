@@ -1030,7 +1030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7049803608021577276, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577276, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1114,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577277, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: Octaves.Array.data[1].height
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7049803608021577277, guid: 2d89a9ba80ff139449cb1f48fcc2f241, type: 3}
       propertyPath: Octaves.Array.data[1].alternate
