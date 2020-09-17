@@ -12,11 +12,6 @@ public class endTrigger : MonoBehaviour
     private bool hasEntered = false;
     private void Start()
     {
-        hasEntered = false;
-    }
-
-    void awake()
-    {
         trash = GameObject.FindGameObjectWithTag("TrashUI").GetComponent<trashUIScript>();
         pl = GameObject.FindGameObjectWithTag("Player").GetComponent<playerManager>();
     }
@@ -25,8 +20,7 @@ public class endTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player"&& !hasEntered)
-        {
-            
+        {            
             LoadNextLevel();
             hasEntered = true;
         }

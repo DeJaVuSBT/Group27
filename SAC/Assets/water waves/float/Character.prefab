@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AirDrag: 1
   WaterDrag: 10
-  NoRotation: 1
+  NoRotation: 0
   AbleJump: 1
   AffectDirection: 1
   AttachToSurface: 0
@@ -258,8 +258,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: 777438a141eeba947b5701accb091d6b, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 4b01e8f42df241d4bac1e8f790c7a1dc, type: 3}
+  fullHeart: {fileID: 21300000, guid: 0ad198fab5a41ca44b1cd0156a29505a, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 9a628ce7eb99cf848b83a0c08561da3a, type: 3}
 --- !u!65 &4496863555964318318
 BoxCollider:
   m_ObjectHideFlags: 0

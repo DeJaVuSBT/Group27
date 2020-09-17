@@ -5,18 +5,17 @@ using UnityEngine;
 public class loseScreen : MonoBehaviour
 {
     private endTrigger trigger;
-    private gameMaster gm;
     private playerPos check;
 
     private void Start()
     {
-        trigger = GameObject.FindGameObjectWithTag("EndTrigger").GetComponent<endTrigger>();       
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<gameMaster>();
+        trigger = GameObject.FindGameObjectWithTag("EndTrigger").GetComponent<endTrigger>();
+        check = GameObject.FindGameObjectWithTag("Player").GetComponent<playerPos>();
     }
 
     private void Update()
     {
-        check = GameObject.FindGameObjectWithTag("Player").GetComponent<playerPos>();
+        
     }
 
     public void LoadFirstLevel()
