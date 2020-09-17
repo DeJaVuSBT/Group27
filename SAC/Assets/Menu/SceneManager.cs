@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager :MonoBehaviour
 {
+    
     public void Loadlevel1() {
      
         UnityEngine.SceneManagement.SceneManager.LoadScene("level1");
