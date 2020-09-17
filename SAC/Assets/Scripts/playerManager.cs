@@ -14,6 +14,7 @@ public class playerManager : MonoBehaviour
     private float Yclamp = 0f;
     public int score = 0;
     private Rigidbody rb;
+    private bool ablejump = false;
     
     private Quaternion defaulYtOrientation, targetOrientation;
     public float maxTurn = 9f;
@@ -37,11 +38,11 @@ public class playerManager : MonoBehaviour
         Vector3 jumpVector = new Vector3(0, jumpForce, 0);
         transform.Translate(moveVector * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space) && wf.AbleJump == true)
+        if(Input.GetKeyDown(KeyCode.Space) && wf.AbleJump == true|| Input.GetKeyDown(KeyCode.Space) && ablejump)
         {
             Debug.Log("jumping");
             rb.AddForce(jumpVector, ForceMode.Impulse);
-          //  isGrounded = false;
+            ablejump = false;
         }
     }
 
@@ -70,6 +71,11 @@ public class playerManager : MonoBehaviour
         {
             Destroy(collision.gameObject);
             score++;
+        }
+        if (collision.tag == "Ocean")
+        {
+            ablejump = true;
+            Debug.Log("hihihihi");
         }
     }
 

@@ -24,7 +24,7 @@ public class endTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && !hasEntered)
+        if(other.tag == "Player"&& !hasEntered)
         {
             
             LoadNextLevel();
