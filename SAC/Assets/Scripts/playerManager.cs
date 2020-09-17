@@ -78,7 +78,6 @@ public class playerManager : MonoBehaviour
         if (collision.tag == "Ocean")
         {
             ablejump = true;
-            Debug.Log("hihihihi");
         }
     }
 

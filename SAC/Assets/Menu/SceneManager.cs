@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager :MonoBehaviour
 {
-    
+
     public void Loadlevel1() {
      
         UnityEngine.SceneManagement.SceneManager.LoadScene("level1");
@@ -23,6 +23,7 @@ public class SceneManager :MonoBehaviour
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("level3");
     }
+
     public void Quit()
     {
 

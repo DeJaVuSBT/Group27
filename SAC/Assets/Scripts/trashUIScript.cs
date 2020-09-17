@@ -11,23 +11,14 @@ public class trashUIScript : MonoBehaviour
     private void Awake()
     {
         gos = GameObject.FindGameObjectsWithTag("Trash");
-        Debug.Log(gos.Length);
         initialTrash = gos.Length;
     }
 
     void Update()
     {
         
-        gos = GameObject.FindGameObjectsWithTag("Trash");
-        Debug.Log(gos.Length);
-        if (initialTrash == gos.Length)
-        {
-            barLength = 0;
-        }
-        else
-        {
-            barLength = 52 / (gos.Length + 1);
-        }
+        gos = GameObject.FindGameObjectsWithTag("Trash") ;
+        barLength = (initialTrash - gos.Length) * 52 / initialTrash;
 
         Set_Width(gameObject, barLength);
     }

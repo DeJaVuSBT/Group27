@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class loseScreen : MonoBehaviour
 {
-    private endTrigger trigger;
     private gameMaster gm;
+    private endTrigger trigger;
     private playerPos check;
 
     private void Start()
     {
-        trigger = GameObject.FindGameObjectWithTag("EndTrigger").GetComponent<endTrigger>();       
+        trigger = GameObject.FindGameObjectWithTag("EndTrigger").GetComponent<endTrigger>();
+        check = GameObject.FindGameObjectWithTag("Player").GetComponent<playerPos>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<gameMaster>();
     }
 
     private void Update()
     {
-        check = GameObject.FindGameObjectWithTag("Player").GetComponent<playerPos>();
+        
     }
 
     public void LoadFirstLevel()
@@ -24,6 +25,7 @@ public class loseScreen : MonoBehaviour
         if (trigger.level == 1)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("level1");
+            gm.lastCheckPointPos = gm.initialPos;
         }
     }
 
@@ -32,6 +34,7 @@ public class loseScreen : MonoBehaviour
         if (trigger.level == 2)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("level2");
+            gm.lastCheckPointPos = gm.initialPos;
         }
     }
 
@@ -40,15 +43,13 @@ public class loseScreen : MonoBehaviour
         if (trigger.level == 3)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("level3");
+            gm.lastCheckPointPos = gm.initialPos;
         }
     }
 
-    public void LoadVictoryLevel()
+    public void LoadMenu()
     {
-        if (trigger.level == 4)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("gameWon");
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     public void LoadFromCheckpoint()
